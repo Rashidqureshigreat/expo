@@ -39,15 +39,18 @@ jobs:
     after: [build_android]
     steps:
       - run: |
-          BUILD_STATUS="${{ after.build_android.status }}"
           COMMIT_SHA="${{ github.sha }}"
+          COMMIT_MESSAGE="${{ github.commit_message }}"
           BRANCH="${{ github.ref_name }}"
           WF_ID="${{ workflow.id }}"
+          ACTOR="${{ github.triggering_actor }}"
+          COMMIT_DISPLAY="${COMMIT_MESSAGE:-$COMMIT_SHA}"
 
-          echo "Build Status: $BUILD_STATUS"
           echo "Branch: $BRANCH"
           echo "Commit: $COMMIT_SHA"
+          echo "Commit Display: $COMMIT_DISPLAY"
           echo "WF_ID: $WF_ID"
+          echo "Actor: $ACTOR"
 
           curl -X POST "$SLACK_WEBHOOK_ANDROID" \
             -H 'Content-Type: application/json' \
@@ -74,7 +77,11 @@ jobs:
                     },
                     {
                       \"type\": \"mrkdwn\",
-                      \"text\": \"*Commit:*\n<https://github.com/expo/expo/commit/$COMMIT_SHA|$COMMIT_SHA>\"
+                      \"text\": \"*Commit:*\n<https://github.com/expo/expo/commit/$COMMIT_SHA|$COMMIT_DISPLAY>\"
+                    },
+                    {
+                      \"type\": \"mrkdwn\",
+                      \"text\": \"*Triggered by:*\n$ACTOR\"
                     }
                   ]
                 }
