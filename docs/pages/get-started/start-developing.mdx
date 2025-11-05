@@ -1,40 +1,101 @@
 ---
-title: Start developing
-description: Make your first change to an Expo project and see it live on your device.
-hideTOC: true
+title: Start earning with VisualDream
+description: Learn how to register, find jobs, and start earning online through the VisualDream Job Portal.
+hideTOC: false
 ---
 
-import { ProjectStructure } from '~/scenes/get-started/start-developing/ProjectStructure';
-import { TemplateFeatures } from '~/scenes/get-started/start-developing/TemplateFeatures';
-import { Collapsible } from '~/ui/components/Collapsible';
-import { ContentSpotlight } from '~/ui/components/ContentSpotlight';
-import { Terminal, DiffBlock } from '~/ui/components/Snippet';
-import { Step } from '~/ui/components/Step';
+import { Step } from '~/components/Step'
+import { Terminal } from '~/components/Terminal'
+import { Collapsible } from '~/components/Collapsible'
+import { ContentSpotlight } from '~/components/ContentSpotlight'
+
+# 🚀 Welcome to VisualDream Job Portal
+
+VisualDream is your trusted partner for finding **real online jobs** and **freelance opportunities** — all in one place.  
+Follow the steps below to get started and start earning from home today 💼
+
+---
 
 <Step label="1">
-## Start a development server
-To start the development server, run the following command:
+## Create your account
+Visit [VisualDream Job Portal](https://visualdream.in) and sign up for a free account.  
+Use your valid email and mobile number for verification.
 
-<Terminal cmd={['$ npx expo start']} />
+<ContentSpotlight 
+  alt="VisualDream signup page"
+  src="/images/signup.png"
+  className="max-w-[540px]"
+/>
 
 </Step>
 
+---
+
 <Step label="2">
-## Open the app on your device
+## Complete your profile
 
-After running the command above, you will see a QR code in your terminal. Scan this QR code to open the app on your device.
+Add your skills, education, and interests. This helps employers and affiliate programs find you faster.
 
-If you're using an Android Emulator or iOS Simulator, you can press <kbd>a</kbd> or <kbd>i</kbd> respectively to open the app.
+✅ Tip: The more detailed your profile, the more job matches you’ll receive.
 
-<Collapsible summary="Having problems?">
+</Step>
 
-Make sure you are on the same Wi-Fi network on your computer and your device.
+---
 
-If it still doesn't work, it may be due to the router configuration &mdash; this is common for public networks. You can work around this by choosing the **Tunnel** connection type when starting the development server, then scanning the QR code again.
+<Step label="3">
+## Browse and apply for jobs
 
-<Terminal cmd={['$ npx expo start --tunnel']} />
+Once your profile is complete, head to the **Jobs** section and explore categories:
+- Work From Home 💻  
+- Data Entry 🧾  
+- Affiliate Promotion 🌐  
+- Freelancing ✍️
 
-> Using the **Tunnel** connection type will make the app reloads considerably slower than on **LAN** or **Local**, so it's best to avoid tunnel when possible. You may want to install and use an emulator or simulator to speed up development if **Tunnel** is required to access your machine from another device on your network.
+Click **Apply** on any job to start your journey.
+
+<Collapsible summary="Having trouble applying?">
+Make sure:
+- You are logged in
+- Your profile is at least 80% complete
+- The job is still active (not expired)
+</Collapsible>
+
+</Step>
+
+---
+
+<Step label="4">
+## Start earning and tracking progress
+
+You can track:
+- Applied jobs  
+- Referral earnings  
+- Weekly rewards  
+
+Go to **Dashboard → Earnings** to monitor your income.
+
+<Terminal cmd={['Dashboard > Earnings']} />
+
+</Step>
+
+---
+
+## 💡 Tips for Success
+- Stay active and check daily updates.
+- Join our Telegram or WhatsApp channel for job alerts.
+- Share your referral link to earn bonus rewards.
+
+---
+
+## 🧭 What’s Next?
+Explore other VisualDream features:
+- **Affiliate Dashboard**
+- **Job Manager Tools**
+- **Reward Center**
+
+---
+
+**👉 Start your journey today — [Join VisualDream Now](https://visualdream.in/signup)**> Using the **Tunnel** connection type will make the app reloads considerably slower than on **LAN** or **Local**, so it's best to avoid tunnel when possible. You may want to install and use an emulator or simulator to speed up development if **Tunnel** is required to access your machine from another device on your network.
 
 </Collapsible>
 
